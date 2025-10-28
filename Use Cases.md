@@ -59,3 +59,7 @@ Use Case 5 – Configure LMS/Calendar Integration
 | **Exceptions** | Step 3: Connection fails -> show diagnostics and rollback changes.<br>Step 4: Policy violation detected -> block save and notify admin. |
 | **Post conditions** | Integration successfully configured with automatic sync and monitoring enabled. |
 | **Related Requirements** | R3, R7, R8, RA1, RA2, RA4, RA5, RA6, RA7, RD1, RD2, RD3, RD4, RM2, RM5 |
+
+
+Use Case Diagram:
+<img width="682" height="540" alt="image" src="https://github.com/user-attachments/assets/c1026edd-da7f-4c12-8676-e6ba620c6d28" />
