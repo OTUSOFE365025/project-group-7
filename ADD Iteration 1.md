@@ -6,7 +6,6 @@ Include in this file the 7 steps for Iteration 1
 |---------|---------|
 | **Design Purpose** | AIDAP is a greenfield system that is used to help connect academic, administrative, and campus information into a single interface that can be accesed by asking question using the systems AI> The goal of this iteration 1 is to establish a high-level archectecture that will support our system needs like cloud-native, scalable, and secure system capable of integrating with multiple university platforms. |
 | **Primary Functional Requirements** | From the use cases:<br>**UC-1: Ask Academic Question**.<br>**UC-2: Receive & Export Deadline Notifications**.<br>**UC-3: View Personalized Dashboard** |
-| **Quality Attribute Scenarios** | See table below. |
 
 ### Quality Attribute Scenarios
 
