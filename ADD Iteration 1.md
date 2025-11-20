@@ -19,7 +19,7 @@ Include in this file the 7 steps for Iteration 1
 
 ### Constraints
 
-| Constraint Category | Description |
+| **Constraint Category** | **Description** |
 |---------------------|-------------|
 | **CON-1** | Must be cloud-based so that it can be accessible via browser, mobile, and voice platforms. |
 | **CON-2** | Must connect with LMS, Registration, Calendar, and Email using each system's public APIs. |
@@ -31,7 +31,7 @@ Include in this file the 7 steps for Iteration 1
 
 ### Architectural Concerns
 
-| Concern |
+| **Concern** |
 |---------|
 | Reliable synchronization between multiple external systems (LMS, Registration, Calendar). |
 | Scalability during peak load (exams, registration). |
@@ -59,3 +59,13 @@ This is the first iteration in the design of a greenfield system, so the goal of
 # Step 3: Choosing one or more elements in the system to decompose
 As this is the first interaction, the element we want to refine is the AIDAP system.
 
+# Step 4: Choose one or more design concepts that satisfy the selected drivers
+
+| **Design Decision and Location** | **Rationale** |
+|------------------------------|-----------|
+| **Use a layered architecture** | We plan on dividing AIDAP using the a three-layered system into Presentation, Application, and Data+Intergration layers. This supports security (QA-2), performance (QA-1), and modifiability (QA-4) by isolating the UI logic from backend services and external integrations. |
+| **Adopt a cloud-native model** | By running AIDAP using a cloud service we can enable automatic scaling which will help us meet our CON-6 (5,000+ users) and ensures availability targets (QA-3). This cloud infrastructure will also help support rapid updates, monitoring, and continuous deployment to help maintain and upgrade our system. |
+| **Use an API Gateway within an integration layer** | Routing all LMS, Registration, Calendar, and Email requests through a dedicated integration layer will help ensure reliability and consistent error handling. This will also directly support the architectural concern of multi-system synchronization and aligns with CON-2. |
+| **Use an AI-driven NLP processing pipeline** | By implementing a modular NLP pipeline (intent detection, entity extraction, dialog management), we will be able to support usability (QA-5) by improving the natural-language understanding and will allow future enhancements without redesigning the whole system. |
+| **Cache frequently accessed data** | Using caching reduces response times and helps achieve the performance requirement of 2 seconds (QA-1). It also improves availability (QA-3) by allowing the system to respond even when some external services are temporarily unavailable. |
+| **Implement secure authentication using SSO** | Integrating institutional Single Sign-On satisfies CON-3 and ensures that sensitive academic data remains protected (QA-2). This also will help simplify the user experience and enforces role-based access. |
