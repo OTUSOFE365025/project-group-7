@@ -55,3 +55,7 @@ This is the first iteration in the design of a greenfield system, so the goal of
 - **UC-1:** Ask Academic Question.
 - **UC-2:** Receive & Export Deadline Notifications (sync + notifications).
 - **Architectural Concern:** Ensure reliable multi-system integration and scalable data access.
+
+# Step 3: Choosing one or more elements in the system to decompose
+As this is the first interaction, the element we want to refine is the AIDAP system.
+
