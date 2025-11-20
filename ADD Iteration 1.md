@@ -81,3 +81,7 @@ As this is the first interaction, the element we want to refine is the AIDAP sys
 | **Create an Application / Backend Logic Layer** | It will coordinates the workflows between the Presentiation Layer, the data integration layer, NLP and databases. It will contain all system logic needed. Centralizing logic here supports maintainability (QA-4) and security (QA-2). |
 | **Create a Notification & Event Sync Service** | Responsible for detecting new deadlines, syncing schedules, generating reminders, and pushing notifications. This fulfills RS2, RS3, and UC-2 and ensures data consistency with external systems. |
 | **Create Monitoring & Logging Services** | Tracks system health, model accuracy, latency, and error rates. This supports RM2, RM4, QA-3 (Availability), and institutional security requirements. |
+
+# Step 6: Sketch and Record Design Decisions
+
+<img width="806" height="358" alt="image" src="https://github.com/user-attachments/assets/2b8219b8-4e02-4483-b48f-7fbdd2822ee2" />
