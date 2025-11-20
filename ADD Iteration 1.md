@@ -85,3 +85,22 @@ As this is the first interaction, the element we want to refine is the AIDAP sys
 # Step 6: Sketch and Record Design Decisions
 
 <img width="806" height="358" alt="image" src="https://github.com/user-attachments/assets/2b8219b8-4e02-4483-b48f-7fbdd2822ee2" />
+
+# Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
+
+# Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
+
+| Not Addressed | Partially Addressed | Completely Addressed | Design Decisions Made During the Iteration |
+|---------------|----------------------|------------------------|--------------------------------------------|
+|               |                      | **UC-1** | By implementing the layered architecture and component separation we fully support the “Ask Academic Question” use case. |
+|               |                      | **UC-2** | The design includes a Notification & Event Sync Service, Data Integration Layer, and Application Layer logic, which together support retrieving deadlines, syncing updates, and exporting events. |
+|               | **QA-1**             |          | Performance is partially addressed through caching and a cloud-native model. |
+|               |                      | **QA-2** | Security and privacy are fully addressed by incorporating SSO authentication and layered access control. |
+|               |                      | **QA-3** | Availability is addressed by using a cloud-native architecture and monitoring services that help meet 99.5% uptime requirements. |
+|               | **QA-4**             |          | Modifiability is partially addressed through the use of a modular integration layer and layered architecture. |
+|               | **QA-5**             |          | Usability is partially addressed supported through the mention of the Presentation Layer, which contains the user interface and the Applciation layer which will make sure everything works. |
+|               |                      | **CON-1** | The architecture is cloud-based and supports all required access platforms (web, mobile, voice). |
+|               |                      | **CON-2** | The Data Integration Layer ensures all LMS, Registration, and Calendar APIs are handled consistently. |
+|               |                      | **CON-3** | SSO authentication is incorporated into the system design. |
+|               |                      | **CON-6** | Scalability needs are addressed through a cloud-native model. |
+
