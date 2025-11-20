@@ -69,3 +69,15 @@ As this is the first interaction, the element we want to refine is the AIDAP sys
 | **Use an AI-driven NLP processing pipeline** | By implementing a modular NLP pipeline (intent detection, entity extraction, dialog management), we will be able to support usability (QA-5) by improving the natural-language understanding and will allow future enhancements without redesigning the whole system. |
 | **Cache frequently accessed data** | Using caching reduces response times and helps achieve the performance requirement of 2 seconds (QA-1). It also improves availability (QA-3) by allowing the system to respond even when some external services are temporarily unavailable. |
 | **Implement secure authentication using SSO** | Integrating institutional Single Sign-On satisfies CON-3 and ensures that sensitive academic data remains protected (QA-2). This also will help simplify the user experience and enforces role-based access. |
+
+# Step 5: Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+
+| Design Decision and Location | Rationale |
+|------------------------------|-----------|
+| **Create a Presentation Layer** | This layer will handle all the required user interactions for students, lecturers, and administrators. It also collects natural-language input like text or voice and displays responses, notifications, and dashboards. This will supports UC-1, UC-2, and UC-3 by providing a simple interface for all user roles. |
+| **Create a Data Integration Layer** | This will layer manages all communications with external systems such as LMS, Registration, Calendar, and Email. It also handles services like API calls, retries, caching, and error recovery. This directly supports CON-2 (API integration) and QA-3 (Availability). |
+| **Create an NLP & AI Processing Component** | This component will be responsible for the intent detection, entity extraction, dialog management, and generating context-aware responses. It fulfills QA-5 (Usability), by enabling natural-language conversation, and supports UC-1 as the core mechanism for interpreting user questions. |
+| **Database** | Stores user profiles, past interactions, preferences, cached events, and notification history. This supports R2 (historical interactions) and RS5 (personalization). Local caching improves response time (QA-1). |
+| **Create an Application / Backend Logic Layer** | It will coordinates the workflows between the Presentiation Layer, the data integration layer, NLP and databases. It will contain all system logic needed. Centralizing logic here supports maintainability (QA-4) and security (QA-2). |
+| **Create a Notification & Event Sync Service** | Responsible for detecting new deadlines, syncing schedules, generating reminders, and pushing notifications. This fulfills RS2, RS3, and UC-2 and ensures data consistency with external systems. |
+| **Create Monitoring & Logging Services** | Tracks system health, model accuracy, latency, and error rates. This supports RM2, RM4, QA-3 (Availability), and institutional security requirements. |
