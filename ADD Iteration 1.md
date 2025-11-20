@@ -38,3 +38,20 @@ Include in this file the 7 steps for Iteration 1
 | Ensuring strict privacy and role-based access. |
 | Balancing personalization with minimal sensitive data storage. |
 | Designing for easy future expansion to new systems (library, email, analytics). |
+
+# Step 2: Establish Iteration Goal by Selecting Drivers
+
+**Iteration Goal:**  
+This is the first iteration in the design of a greenfield system, so the goal of this iteration is to define the overall system structure for AIDAP.
+
+**Drivers:**
+- **QA-1: Performance** – System must respond within 2 seconds.
+- **QA-2: Security & Privacy** – SSO required; user data must remain protected.
+- **QA-3: Availability** – System must maintain 99.5% uptime.
+- **CON-1:** Must be cloud-based and accessible via browser, mobile, and voice platforms.
+- **CON-2:** Must integrate with LMS, Registration, and Calendar using their APIs.
+- **CON-3:** Must use institutional Single Sign-On (SSO).
+- **CON-6:** Must scale to at least 5,000 concurrent users.
+- **UC-1:** Ask Academic Question.
+- **UC-2:** Receive & Export Deadline Notifications (sync + notifications).
+- **Architectural Concern:** Ensure reliable multi-system integration and scalable data access.
