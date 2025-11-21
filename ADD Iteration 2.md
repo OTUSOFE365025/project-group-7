@@ -68,3 +68,19 @@ This subsystem has the following component:
 | **Implement caching for repeated AI/NLP operations** | Caching model outputs reduces repeated computation. This improves performance (QA-1), especially under high load. |
 | **Introduce an internal privacy filter** | A component that will preprocess all data to remove or masks sensitive information in user queries supports QA-2 (Security & Privacy) and CON-7. This will ensures no sensitive data enters logs or training feedback. |
 | **Allow configurable AI model versions inside the subsystem** | A configuration approach (e.g., selecting intent model v1.2, entity model v1.1) supports QA-4 (Modifiability) by enabling safe model updates without disrupting other system components. |
+
+# Step 5: Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+
+| **Design Decision and Location** | **Rationale** |
+|----------------------------------|---------------|
+| **Create an Intent Classification Module** | This module will be responsible for identifying what the user is trying to do. Accurate intent classification directly impacts usability (QA-5) and is essential for UC-1. |
+| **Create an Entity Extraction Module** | This module will extracts key details from the user query. This will help allows the Application Layer to request the correct data from external systems. Supports usability (QA-5) and performance (QA-1) by narrowing the context. |
+| **Create a Multilingual Preprocessing Component** | Handles language detection and normalizing it, enabling AIDAP to support multi-language queries. Keeping this separate increases modifiability (QA-4). |
+| **Create a Privacy Filter** | Removes or masks sensitive information before the query is logged or processed further. Supports QA-2 (Security & Privacy) and helps meet CON-7. |
+| **Create a Response Generation Component** | Converts structured data from the Application Layer into a clear, conversational response. This maintains usability (QA-5) and improves consistency. |
+| **Create a Model Configuration** | Allows the component to load specific intent/entity model versions. Supports QA-4 (Modifiability) by enabling safe upgrades without having to affect the overall system. |
+| **Create Caching Support for NLP Outputs** | Caches repeated computations such as embeddings or frequent intents to help reduce processing time. Supports QA-1 (Performance) and ensures faster response times during peak usage. |
+
+# Step 6: Sketch and record the design decisions
+
+
