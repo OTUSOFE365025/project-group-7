@@ -58,3 +58,13 @@ This subsystem has the following component:
 - entity extraction  
 - dialog management  
 - generating natural-language responses  
+
+# Step 4: Choose One or More Design Concepts That Satisfy the Selected Drivers
+
+| **Design Decision and Location** | **Rationale** |
+|----------------------------------|---------------|
+| **Use a modular NLP pipeline** | Breaking the NLP Engine into modules such as Intent Classifier, Entity Extractor, and Response Generator improves usability (QA-5) and modifiability (QA-4). Each module will can be updated or replaced without having to impact the rest of the subsystem. |
+| **Add multilingual processing support** | Introducing a language-handling layer will enable AIDAP to be more versatile. Making this modular also enhances long-term maintainability. |
+| **Implement caching for repeated AI/NLP operations** | Caching model outputs reduces repeated computation. This improves performance (QA-1), especially under high load. |
+| **Introduce an internal privacy filter** | A component that will preprocess all data to remove or masks sensitive information in user queries supports QA-2 (Security & Privacy) and CON-7. This will ensures no sensitive data enters logs or training feedback. |
+| **Allow configurable AI model versions inside the subsystem** | A configuration approach (e.g., selecting intent model v1.2, entity model v1.1) supports QA-4 (Modifiability) by enabling safe model updates without disrupting other system components. |
