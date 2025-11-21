@@ -48,3 +48,13 @@ The goal of the second iteration will be to refine the actual structure of the N
 - **UC-1:** Ask Academic Question – Depends heavily on accurate intent/entity extraction.
 - **RS4:** Multilingual query support – Requires modular language-processing structure.
 - **Architectural Concern:** Ensure that the NLP subsystem can scale independently.
+
+# Step 3: Choose One or More Elements in the System to Decompose
+
+For this iteration, the element we want to refine is the NLP + AI Engine.
+
+This subsystem has the following component:
+- intent detection  
+- entity extraction  
+- dialog management  
+- generating natural-language responses  
