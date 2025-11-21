@@ -33,3 +33,18 @@ Include in this file the 7 steps for Iteration 2
 | Avoiding privacy issues from storing raw user text in logs. |
 | Supporting multilingual queries through the modular language-processing components in the NLP. |
 | Ensuring the NLP component can scale independently under heavy query load. |
+
+# Step 2: Choose the Iteration Goal
+
+**Iteration Goal:**  
+The goal of the second iteration will be to refine the actual structure of the NLP + AI engine. This is a core subsytem in our design that is responsble for handling user intent, extracting entities, and generating natural-language response.
+
+**Drivers:**
+- **QA-5: Usability** – The system must correctly understand most queries on the first attempt.
+- **QA-1: Performance** – NLP processing must be fast enough to respond within 2 seconds.
+- **QA-4: Modifiability** – The design must support updating or replacing AI models without affecting other components.
+- **QA-2: Security** – User text must be handled in a way that will comply with the set privacy constraints.
+- **CON-7:** Must comply with institutional data protection rules.
+- **UC-1:** Ask Academic Question – Depends heavily on accurate intent/entity extraction.
+- **RS4:** Multilingual query support – Requires modular language-processing structure.
+- **Architectural Concern:** Ensure that the NLP subsystem can scale independently.
