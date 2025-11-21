@@ -87,5 +87,13 @@ This subsystem has the following component:
 
 # Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
-
+| Not Addressed | Partially Addressed | Completely Addressed | Design Decisions Made During the Iteration |
+|---------------|----------------------|------------------------|--------------------------------------------|
+|               |                      | **UC-1**                  | By refining the NLP Engine, we support the UC-1 by improving the intent detection and entity extraction, which in hand will allow AIDAP to better interpret academic questions. |
+|               |                      | **RS4**                   | The addition of a language handler component, we are fully supporting the multi-language query handling capabilities. |
+|               | **QA-1**             |                           | Performance is partially addressed through NLP caching. |
+|               |                      | **QA-5**                  | Usability is fully supported by introducing accurate intent classification, entity extraction, sanitization, and structured response generation. |
+|               | **QA-4**             |                           | Modifiability is partially addressed by modularizing the NLP pipeline and adding model versioning. |
+|               |                      | **QA-2**                  | Security and privacy are fully supported through the privacy filter. |
+|               |                      | **CON-7**                 | The privacy filter ensures compliance with institutional data-protection rules within the NLP subsystem. |
 
