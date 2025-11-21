@@ -83,4 +83,9 @@ This subsystem has the following component:
 
 # Step 6: Sketch and record the design decisions
 
+<img width="766" height="375" alt="image" src="https://github.com/user-attachments/assets/877ed1dd-5538-47bc-abe0-3ea15a392e00" />
+
+# Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
+
+
 
